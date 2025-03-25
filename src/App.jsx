@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Toaster position="top-center" />
           <Layout>
-            <Routes>
+            <Routes className="font-['Poppins']">
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/teachers" element={<Teachers />} />

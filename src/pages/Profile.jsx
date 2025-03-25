@@ -61,14 +61,14 @@ function Profile() {
   
   if (loading) {
     return (
-      <div className="flex justify-center items-center py-20">
+      <div className="flex justify-center items-center py-20 font-[Poppins]">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
   
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto font-['Poppins']">
       <div className="mb-10">
         <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">My Profile</h1>
         <p className="text-gray-600 dark:text-gray-300">

@@ -4,11 +4,11 @@ function Footer() {
   const currentYear = new Date().getFullYear()
   
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 mt-auto">
+    <footer className="bg-gray-100 dark:bg-gray-900 mt-auto font-[Poppins]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">TuitionHub</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Vastavik Tuitions</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Providing quality education and learning resources to help students excel in their academic journey.
             </p>
@@ -37,9 +37,9 @@ function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Email: info@tuitionhub.com</li>
-              <li>Phone: +91 9876543210</li>
-              <li>Address: 123 Education Street, Learning City</li>
+              <li>Email: support@vastavik.site</li>
+              <li>Phone: +91 62896 52321</li>
+              <li>Address: Samajh Sebi Club B-Block, Bottola Near Lions Vidya Mandir</li>
             </ul>
             <div className="mt-4 flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400">

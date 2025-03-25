@@ -16,23 +16,28 @@ function Navbar() {
   }
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md">
+    <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
-                Vastavik Tuitions
-              </Link>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8 pt-4">
+          {/* Logo - Left side */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link to="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
+              Vastavik Tuitions
+            </Link>
+          </div>
+          
+          {/* Navigation Links - Middle */}
+          <div className="hidden sm:flex sm:items-center justify-center flex-1">
+            <div className="flex space-x-8">
               <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Home</Link>
               <Link to="/courses" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Courses</Link>
               <Link to="/teachers" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Teachers</Link>
               <Link to="/centers" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Centers</Link>
             </div>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-4">
+          
+          {/* Auth & Theme - Right side */}
+          <div className="hidden sm:flex sm:items-center sm:space-x-4">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -63,6 +68,7 @@ function Navbar() {
             )}
           </div>
           
+          {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
             <button
               onClick={toggleTheme}

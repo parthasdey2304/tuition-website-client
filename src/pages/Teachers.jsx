@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { useTheme } from '../context/ThemeContext'
 
 function Teachers() {
+  const { darkMode } = useTheme()
   const [teachers, setTeachers] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -142,7 +144,7 @@ function Teachers() {
   });
   
   return (
-    <div>
+    <div className="font-['Poppins']">
       <div className="mb-10">
         <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Our Expert Teachers</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -155,71 +157,71 @@ function Teachers() {
         <div className="flex space-x-2 min-w-max pb-2">
           <button 
             onClick={() => filterTeachers('all')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'all' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             All Teachers
           </button>
           <button 
             onClick={() => filterTeachers('online')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'online' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Online Available
           </button>
           <button 
             onClick={() => filterTeachers('offline')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'offline' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Offline Available
           </button>
           <button 
             onClick={() => filterTeachers('Mathematics')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'Mathematics' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Mathematics
           </button>
           <button 
             onClick={() => filterTeachers('Physics')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'Physics' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Physics
           </button>
           <button 
             onClick={() => filterTeachers('Chemistry')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'Chemistry' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Chemistry
           </button>
           <button 
             onClick={() => filterTeachers('Biology')} 
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm ${
               activeFilter === 'Biology' 
-                ? 'bg-blue-600 text-white dark:bg-blue-500' 
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            } transition-colors`}
+                ? 'bg-blue-600/90 text-white shadow-lg' 
+                : 'bg-gray-200/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-gray-300/70 dark:hover:bg-gray-600/70'
+            }`}
           >
             Biology
           </button>
@@ -242,60 +244,79 @@ function Teachers() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTeachers.map(teacher => (
-            <div key={teacher.id} className="card overflow-hidden flex flex-col">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
-                <img 
-                  src={teacher.photo} 
-                  alt={teacher.name} 
-                  className="w-24 h-24 object-cover rounded-full"
-                />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{teacher.name}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{teacher.qualification}</p>
+            <div 
+              key={teacher.id} 
+              className={`backdrop-blur-md bg-white/30 dark:bg-gray-800/40 border border-white/20 dark:border-gray-700/30 shadow-xl rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] ${darkMode ? 'text-white' : 'text-gray-900'}`}
+            >
+              <div className="p-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+                  <div className="relative">
+                    <img 
+                      src={teacher.photo} 
+                      alt={teacher.name} 
+                      className="w-24 h-24 object-cover rounded-full border-4 border-white/50 dark:border-gray-700/50 shadow-lg"
+                    />
+                    <div className={`absolute -bottom-2 -right-2 text-xs text-center font-bold px-2 py-1 rounded-full shadow-md ${
+                      teacher.available.includes('Online') && teacher.available.includes('Offline')
+                        ? 'bg-purple-500/80 backdrop-blur-sm text-white'
+                        : teacher.available.includes('Online')
+                          ? 'bg-green-500/80 backdrop-blur-sm text-white'
+                          : 'bg-blue-500/80 backdrop-blur-sm text-white'
+                    }`}>
+                      {teacher.available}
+                    </div>
+                  </div>
                   
-                  <div className="flex items-center mt-1">
-                    <span className="text-yellow-500 flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill={i < Math.floor(teacher.rating) ? "currentColor" : "none"} stroke="currentColor">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                      <span className="ml-1 text-sm">{teacher.rating}</span>
-                    </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">({teacher.reviews} reviews)</span>
+                  <div>
+                    <h3 className="text-xl font-semibold">{teacher.name}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{teacher.qualification}</p>
+                    
+                    <div className="flex items-center mt-2">
+                      <span className="text-yellow-400 flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill={i < Math.floor(teacher.rating) ? "currentColor" : "none"} stroke="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                        <span className="ml-1 text-sm">{teacher.rating}</span>
+                      </span>
+                      <span className={`text-sm ml-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>({teacher.reviews} reviews)</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="mb-3">
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{teacher.bio}</p>
                 
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {teacher.specialization.map((spec, index) => (
-                    <span key={index} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">
-                      {spec}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-3 mt-auto">
-                <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-gray-600 dark:text-gray-300">Experience:</span>
-                  <span className="font-medium text-gray-900 dark:text-white">{teacher.experience}</span>
+                <div className="mb-4">
+                  <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{teacher.bio}</p>
+                  
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {teacher.specialization.map((spec, index) => (
+                      <span key={index} className="bg-blue-100/70 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded backdrop-blur-sm">
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 
-                <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-gray-600 dark:text-gray-300">Classes:</span>
-                  <span className="font-medium text-gray-900 dark:text-white">{teacher.classes.join(", ")}</span>
+                <div className="border-t border-gray-200/50 dark:border-gray-700/50 pt-4 mt-auto space-y-2">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className={`${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Experience:</span>
+                    <span className="font-medium">{teacher.experience}</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-sm">
+                    <span className={`${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Classes:</span>
+                    <span className="font-medium">{teacher.classes.join(", ")}</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-sm mb-4">
+                    <span className={`${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Subjects:</span>
+                    <span className="font-medium">{teacher.subjects.join(", ")}</span>
+                  </div>
+                  
+                  <button className="w-full bg-blue-600/90 hover:bg-blue-700 text-white py-2 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg">
+                    Schedule a Session
+                  </button>
                 </div>
-                
-                <div className="flex items-center justify-between text-sm mb-4">
-                  <span className="text-gray-600 dark:text-gray-300">Available:</span>
-                  <span className="font-medium text-gray-900 dark:text-white">{teacher.available}</span>
-                </div>
-                
-                <button className="btn btn-primary w-full">Schedule a Session</button>
               </div>
             </div>
           ))}
@@ -303,14 +324,16 @@ function Teachers() {
       )}
       
       {/* Join Our Team Section */}
-      <section className="mt-16 py-10 px-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+      <section className="mt-16 py-10 px-6 backdrop-blur-md bg-gray-50/80 dark:bg-gray-800/80 border border-white/20 dark:border-gray-700/30 rounded-xl shadow-lg">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Join Our Teaching Team</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             Are you passionate about teaching and helping students achieve their academic goals? 
             We're always looking for talented educators to join our team.
           </p>
-          <button className="btn btn-primary px-6 py-3">Apply as a Teacher</button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg">
+            Apply as a Teacher
+          </button>
         </div>
       </section>
     </div>
