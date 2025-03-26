@@ -13,6 +13,7 @@ import Settings from './pages/Settings'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Payment from './pages/Payment'
+import Course_Player from './pages/Course_Player'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 
 function App() {
@@ -32,6 +33,17 @@ function App() {
               <Route path="/payment" element={<Payment />} />
               <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
               <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+              {/* New route for Course Player */}
+              <Route path="/course/:courseId/video/:videoId" element={
+                <ProtectedRoute>
+                  <Course_Player />
+                </ProtectedRoute>
+              } />
+              <Route path="/course/:courseId" element={
+                <ProtectedRoute>
+                  <Course_Player />
+                </ProtectedRoute>
+              } />
             </Routes>
           </Layout>
         </Router>
