@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 
 function Courses() {
@@ -239,7 +240,13 @@ function Courses() {
         
         <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-200 dark:border-gray-700/30">
           <span className="font-bold text-lg">₹{course.price.toLocaleString()}</span>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg">Enroll Now</button>
+          <Link 
+            to="/payment" 
+            state={{ course: course }}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
+          >
+            Enroll Now
+          </Link>
         </div>
       </div>
     </div>

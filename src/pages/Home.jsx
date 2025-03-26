@@ -5,35 +5,43 @@ function Home() {
   return (
     <div className="font-['Poppins'] snap-y snap-mandatory">
       {/* Hero Section */}
-      <section className="relative min-h-screen h-screen flex items-center snap-start snap-always">
-        <div className="absolute inset-0 -z-10">
-          <img 
-            src="https://plus.unsplash.com/premium_photo-1661700257600-fe8f669604e7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-            alt="Students studying" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-50/90 to-white dark:from-gray-900/90 dark:to-gray-900"></div>
-        </div>
-        
-        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-[45px] md:leading-[50px] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-            Empowering Students with Quality Education
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
-            Discover online and offline courses designed to help you excel in your academic journey.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/courses" className="btn btn-primary text-lg px-8 py-3 duration-300 hover:duration-300 hover:bg-purple-600 dark:hover:bg-purple-700 rounded-full">
-              Explore Courses
-            </Link>
-            <Link to="/centers" className="btn bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-blue-500 dark:text-blue-400 text-lg px-8 py-3 rounded-full">
-              Find Nearby Centers
-            </Link>
+        <section className="relative min-h-screen h-screen flex items-center snap-start snap-always">
+          <div className="absolute inset-0 -z-10">
+            <img 
+          src="https://plus.unsplash.com/premium_photo-1661700257600-fe8f669604e7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          alt="Students studying" 
+          className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-50/90 to-white dark:from-gray-900/90 dark:to-gray-900"></div>
           </div>
-        </div>
-      </section>
-        
-      {/* Features Section */}
+          
+          <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 -mt-10">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-[45px] md:leading-[50px] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+          Empowering Students with Quality Education
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+          Discover online and offline courses designed to help you excel in your academic journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link to="/courses" className="btn btn-primary text-lg px-8 py-3 duration-300 hover:duration-300 hover:bg-purple-600 dark:hover:bg-purple-700 rounded-full">
+            Explore Courses
+          </Link>
+          <Link to="/centers" className="btn bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-blue-500 dark:text-blue-400 text-lg px-8 py-3 rounded-full">
+            Find Nearby Centers
+          </Link>
+            </div>
+            <div className="absolute bottom-8 left-0 right-0 flex justify-center ">
+          <div className="flex flex-col items-center text-gray-600 dark:text-gray-300 animate-bounce">
+            <p className="mb-2 text-sm font-medium">Scroll to discover more</p>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+            </div>
+          </div>
+        </section>
+          
+        {/* Features Section */}
         <section className="py-12 min-h-screen h-screen flex items-center snap-start snap-always">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="text-center mb-12">

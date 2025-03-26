@@ -331,9 +331,9 @@ function Teachers() {
             Are you passionate about teaching and helping students achieve their academic goals? 
             We're always looking for talented educators to join our team.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg">
+          <a href='https://docs.google.com/forms/d/e/1FAIpQLSc9Ng0FGK-dnxowuiRpClOC5TQVjjtIcBBp3cQTACqd7OkatA/viewform?usp=sharing' className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium shadow-md hover:shadow-lg">
             Apply as a Teacher
-          </button>
+          </a>
         </div>
       </section>
     </div>

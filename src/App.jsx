@@ -12,6 +12,7 @@ import Profile from './pages/Profile'
 import Settings from './pages/Settings'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Payment from './pages/Payment'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="/centers" element={<Centers />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/payment" element={<Payment />} />
               <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
               <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
             </Routes>
